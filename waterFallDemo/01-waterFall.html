@@ -58,9 +58,9 @@
         </div>
    <%}%>
 </script>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/template-native.js"></script>
-<script src="../js/water.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/template-native.js"></script>
+<script src="./js/water.js"></script>
 <script>
     function loadData(currentPage){
         if($(".loadMore").hasClass("loading")){
@@ -80,6 +80,7 @@
                     col:5
                 });
                 $(".loadMore").attr("page",currentPage);
+                console.log(html);
             },
             complete:function(){
                 $(".loadMore").removeClass("loading");
@@ -104,7 +105,7 @@
     });
      /*实现自动滚动加载*/
      $(window).on("scroll",function(){
-        console.log(111111);
+        
         var offsetTop = $(".items").offset().top;
         var itemsHeight = $(".items").height();
 
